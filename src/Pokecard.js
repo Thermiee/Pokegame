@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Pokecard.css';
 const POKE_API = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
 
 class Pokecard extends Component {
@@ -8,7 +9,13 @@ class Pokecard extends Component {
             <div>
                 <div className="Pokecard">
                     <h1>{this.props.name}</h1>
-                    <img src = {imgSrc} alt='pokemon character'/>
+                    <img src = {imgSrc} alt={this.props.name}/>
+                    <div>
+                       TYPE: {this.props.type}
+                    </div>
+                    <div>
+                       EXP: {this.props.exp}
+                    </div>
                 </div>
             </div>
         )
